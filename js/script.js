@@ -6,13 +6,13 @@ serchIcon.addEventListener('click', () => {
    headerContainer.style.display = 'none';
    serchForm.style.display = 'flex';
 
-   document.addEventListener('click',(el)=>{
-      const click = el.composedPath().includes(serchForm);
-      console.log(click);
+   // document.addEventListener('click',(el)=>{
+   //    const click = el.composedPath().includes(serchForm);
+   //    console.log(click);
 
-      if(!click){
-         headerContainer.style.display = 'block';
-         serchForm.style.display = 'none';
-      }
-   })
+   //    if(!click){
+   //       headerContainer.style.display = 'block';
+   //       serchForm.style.display = 'none';
+   //    }
+   // })
 })

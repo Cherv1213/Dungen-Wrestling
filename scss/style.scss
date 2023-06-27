@@ -2,3 +2,110 @@
 @import './normalize.scss';
 @import './header.scss';
 @import './footer.scss';
+
+
+
+/*-----------------------------------------main-page--------------------------------------------------------*/
+.main-page {
+   height: calc(100vh - 105px);
+   background-image: url(../images/main-page/Hero.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.main-page__container {
+   text-align: center;
+
+   h1{
+      color: #fff;
+      font-size:clamp(2.7rem,8vw,5rem);
+      font-weight: 700;
+      letter-spacing: -4px;
+      margin-bottom: 5px;
+   }
+   a{
+      padding: 20px 30px;
+      border-radius: 6px;
+      background-color: #f00;
+      font-weight: 700;
+      color: #fff;
+      transition: all 0.3s ease 0s;
+      &:hover{
+         background-color: rgb(189, 3, 3);
+      }
+   }
+}
+
+/*---------------------------------------block-info----------------------------------------------------------*/
+.block-info{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 0;
+   background-color: #2F2D2D;
+
+   .__container{
+      display: flex;
+      min-height: 40px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      @media (max-width: 762px){
+         gap: 1rem;
+      }
+      @media (max-width: 520px){
+         justify-content: flex-start;
+      }
+      div{
+         padding: 0 40px 0 70px;
+         &:not(:last-child){
+            border-right: 1px solid #828694;
+            @media (max-width: 520px){
+               border-right: none;
+            }
+         }
+         a{
+            white-space: nowrap;
+         }
+         height: 100%;
+         display: flex;
+         align-items: center;
+         &:nth-child(1){
+            a::before{
+                     content: url(../images/main-page/update.svg);
+                     position: absolute;
+                     top: -1px;
+                     left: -30px;
+               }
+            }
+         &:nth-child(2){
+            a::before{
+                     content: url(../images/main-page/mail.svg);
+                     position: absolute;
+                     top: -1px;
+                     left: -30px;
+               }
+            }
+         &:nth-child(3){
+            a::before{
+                     content: url(../images/main-page/local_shipping.svg);
+                     position: absolute;
+                     top: -1px;
+                     left: -30px;
+               }
+            }
+         }
+      }
+      a{
+         font-weight: 700;
+         color: #fff;
+         position: relative;
+         &:hover{
+            color: #c2c2c2;
+         }
+      }
+   }
+  

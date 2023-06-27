@@ -109,3 +109,58 @@
       }
    }
   
+   /*------------------------------------top-picks-------------------------------------------------------------*/
+   .top-picks {
+      padding: 60px 0 70px;
+      background-color: #fff;
+   }
+   .top-picks__container {
+   }
+   .star-decore{
+      position: relative;
+      width: max-content;
+      margin:0 auto 50px;
+      &::before{
+         content: url(../images/decors/star.svg);
+         position: absolute;
+         top: 50%;
+         left: -25px;
+         transform: translateY(-50%);
+      }
+      &::after{
+         content: url(../images/decors/star.svg);
+         position: absolute;
+         top: 50%;
+         right: -25px;
+         transform: translateY(-50%);
+      }
+      .title {
+      color:#2F2D2D;
+      font-size: 42px;
+      font-weight: 700;
+      }
+   }
+   
+   .top-picks__category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+   }
+   .category__item {
+      color:  #828694;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 70px;
+      cursor: pointer;
+      transition: all 0.4s ease 0s;
+      &:hover{
+         color: #2F2D2D;
+         background-color: #F2F6F9;
+      }
+   }
+   .category__item._choosed{
+      color: #fff;
+      background-color: #f00;
+   }

@@ -1,3 +1,4 @@
+/*-------------------------------header------------------------------------------------------------------*/
 const serchIcon = document.querySelector('.header__search');
 const headerContainer = document.querySelector('.header__container');
 const serchForm = document.querySelector('.header-form');
@@ -16,7 +17,6 @@ serchIcon.addEventListener('click', () => {
    mainBlock.style.paddingTop = '0'
    })
 })
-
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if(iconMenu){
@@ -26,3 +26,13 @@ if(iconMenu){
       menuBody.classList.toggle('_active');
    });
 }
+/*--------------------------------main-----------------------------------------------------------------*/
+const categoryItem = document.querySelectorAll('.category__item');
+
+categoryItem.forEach(el => {
+   el.addEventListener('click', () => {
+      categoryItem.forEach(el => el.classList.remove('_choosed'));
+      el.classList.add('_choosed')
+      
+   })
+})
